@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <main>
+        <aside>
+            <ul class="Links">
+                <li onclick="Navigate(0)" class="activeLink"><i class="fa-solid fa-house"></i>
+                    <p>Home</p>
+                </li>
+                <li onclick="Navigate(1)"><i class="fa-solid fa-user"></i>
+                    <p>About Me</p>
+                </li>
+                <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
+                    <p>Skills</p>
+                </li>
+                <li onclick="Navigate(3)"><i class="fa-solid fa-images"></i>
+                    <p>Hobby</p>
+                </li>
+                <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
+                    <p>Contact Me</p>
+                </li>
+                <li onclick="Navigate()"><i class=""></i>
+                    <a href="https://trangtd26.github.io/BTL%20WEB/WEBTLinh.html"><p>Back</p></a>
+                </li>
+            </ul>
+        </aside>
+        <div class="swiper mySwiper">
+            <div class="SlideContainer swiper-wrapper">
+
+                <!-- Home Slide -->
+                <div class="swiper-slide home-slide">
+                    <div class="HomeContent">
+                        <h1>Hi! I'm <span class="stylized-name">Thảo Linh</span>,</h1>
+                        <h2>A <span class="proffesions">Web Developer</span></h2>
+                        
+                    </div>
+                    <div class="SideImg">
+                        <div class="top-right-corner">
+                            <hr class="hr1">
+                            <hr class="hr2">
+                        </div>
+                        <img src="./linhnen.jpg" alt="">
+                        <div class="bottom-left-corner">
+                            <hr class="hr1">
+                            <hr class="hr2">
+                        </div>
+                    </div>
+                    <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-right fa-shake"></i></p>
+                </div>
+
+                <!-- About Me Slide -->
+                <div class="swiper-slide">
+                    <div class="about-us">
+                        <h1 class="heading">About Me</h1>
+                        <p class="aboutme-deatils">
+                            Hello! My name is Linh and I am passionate about photography and travel. I love exploring new ideas and making meaningful connections with people. With a background in design, I strive to bring creativity and dedication to every project I work on. In my spare time, I enjoy reading and listening to music. Thank you for visiting my page and I look forward to sharing more about myself with you!
+                        </p>
+                        <div class="about-me-division">
+                            <div class="about-me-table">
+                                <li><span>Full name:</span> Phạm Thảo Linh</li>
+                                <li><span>School:</span> HaNoi Metropolitan University</li>
+                                <li><span>Class:</span> CNTT D2023A</li>
+                                <li><span>Date of birth:</span> 2005/16/08</li>
+                                <li><span>Age:</span> 19+ </li>
+                                <li><span>Hobby:</span> Read books and listen to music</li>
+                                <li><span>Phone:</span> 0983123539</li>
+                                <div class="buttonGroup">
+                                    <button class="hireMe-btn">Hire Me</button>
+                                    <button class="contactMe-btn">Contact Me</button>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <li>
+                                    <p>HTML</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:99%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>CSS</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:80%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>JavaScript</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:85%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>React</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:50%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Python</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:60%"></div>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Slide -->
+                <div class="swiper-slide services">
+                    <h1 class="heading">Skills </h1>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <h2>Web Design</h2>
+                        <p>A well-designed website not only captures the viewer’s attention but also enhances the user experience by making it easy to navigate, engaging, and effective in communicating the intended message.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                        <h2>Web Development</h2>
+                        <p>I am skilled in web development, with a strong ability to build and maintain functional, interactive websites. I am proficient in both front-end and back-end development, allowing me to create user-friendly experiences and ensure seamless performance across various devices.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h2>Video Edit</h2>
+                        <p>I am skilled in video editing, with the ability to create engaging and polished videos that effectively communicate the intended message. I am experienced in using editing software to enhance visuals, sound, and pacing, ensuring high-quality results.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Slide -->
+                <div class="swiper-slide gallery">
+                    <h1 class="heading">Hobby</h1>
+                    <div class="project"><img src="./readingbook.jpg" alt=""><div class="caption">Reading book</div></div>
+                    <div class="project"><img src="./volunter.jpg" alt=""><div class="caption">Volunteering</div></div>
+                    <div class="project"><img src="./music.jpg" alt=""><div class="caption">Listen to music</div></div>
+                    <div class="project"><img src="./travelling.jpg" alt=""><div class="caption">Traveling</div></div>
+                    <div class="project"><img src="./takephoto.jpg" alt=""><div class="caption">Take a photo</div></div>
+                    <div class="project"><img src="./chill.jpg" alt=""><div class="caption">Chill</div></div>
+                </div>
+
+                <!-- Contact Me Slide -->
+                <div class="swiper-slide contactMe">
+                    <h1 class="heading">Contact Me</h1>
+                    <div class="contactinfo"><i class="fa-solid fa-phone"></i>
+                        <h3>Mobile Phone</h3>
+                        <p>0983123539</p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-solid fa-location-dot"></i>
+                        <h3>Location</h3>
+                        <p>HaNoi City</p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-regular fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>phamtlinh20055@gmail.com</p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-solid fa-globe"></i>
+                        <h3>Website</h3>
+                        <p>phamtlinh20055</p>
+                    </div>
+                    <form>
+                        <h2>Send Me A Message</h2>
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email">
+                        <textarea rows="10" placeholder="Type your Message Here..."></textarea>
+                        <div class="buttonGroup">
+                            <button class="contactMe-btn">Send</button>
+                        </div>
+                    </form>
+                    <footer>
+                        <li>Thảo Linh-ed</li>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script src="portfolio.js"></script>
+</body>
+</html>

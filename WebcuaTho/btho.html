@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bùi Thị Thơ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./ảnh/nền.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #000;
+            font-weight: 300;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        header {
+            font-family: 'Segoe UI', sans-serif;
+            color: #fff;
+            text-align: center;
+            background-image: url('./ảnh/nền\ tiêu\ đề.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+        }
+
+        h1 {
+            font-size: 72pt; 
+            font-weight: 800; 
+            color: #FFB3BA; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            margin: 0;
+            padding-top: 220px; 
+            text-shadow: 
+                4px 4px 8px rgba(0, 0, 0, 0.7),
+                -1px -1px 0 #000,  
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000; 
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px; 
+            background-color: #000;
+            padding: 25px 0; 
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 350;
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 16pt; 
+            text-decoration: none;
+            padding: 14px 30px; 
+            transition: background-color 0.3s, transform 0.3s; 
+            font-style: normal; 
+        }
+
+        nav a:hover {
+            background-color: #333; 
+            border-radius: 5px;
+            transform: scale(1.1); 
+        }
+
+        .container {
+            max-width: 100%; 
+            margin: 40px auto; 
+            padding: 20px; 
+            text-align: center;
+        }
+
+        .profile-image img {
+            width: 350px; 
+            height: 350px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            object-fit: cover;
+            margin-bottom: 30px; 
+            transition: transform 0.2s; 
+        }
+
+        .profile-image img:hover {
+            transform: scale(1.1); 
+        }
+
+        h2 {
+            font-size: 56pt; 
+            font-weight: 700; 
+            color: #141313; 
+            margin-top: 10px; 
+            transition: color 0.3s; 
+            padding-top: 100px; 
+            position: relative; 
+            top: -10px; 
+        }
+
+        h2:hover {
+            color: #FFB3BA; 
+        }
+
+        .intro-section p {
+            font-size: 22pt; 
+            color: #000;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-weight: 400;
+            margin: 20px 0; 
+            opacity: 0; 
+            transform: translateY(20px); 
+            transition: opacity 0.5s ease, transform 0.5s ease; 
+        }
+
+        .intro-section p.visible {
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+
+        a {
+            font-size: 22pt; 
+            font-style: italic;
+            color: #111311;
+            text-decoration: none;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 400;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .skills-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+            margin: 30px 0; 
+        }
+
+        .skill {
+            text-align: center;
+            margin: 40px; 
+        }
+
+        .skill img {
+            width: 180px; 
+            height: 180px;
+            border-radius: 10%;
+            transition: transform 0.2s; 
+        }
+
+        .skill img:hover {
+            transform: scale(1.1); 
+        }
+
+        .skill-name {
+            font-size: 22pt; 
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .profile-image {
+            margin: 20px auto;
+        }
+
+        .contact-section {
+            margin-top: 20px; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+        }
+
+        .portfolio-item img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        .portfolio-item img:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-input {
+            width: 100%; 
+            max-width: 900px; 
+            height: 60px; 
+            padding: 20px; 
+            margin: 10px 0; 
+            font-size: 24pt; 
+            border: 1px solid #ccc;
+            border-radius: 10px; 
+        }
+
+        .contact-section textarea {
+            width: 100%; 
+            max-width: 900px; 
+            height: 150px; 
+            padding: 20px; 
+            margin: 10px 0; 
+            font-size: 24pt; 
+            border: 1px solid #ccc;
+            border-radius: 10px; 
+        }
+
+        .contact-button {
+            padding: 20px 40px; 
+            font-size: 24pt; 
+            background-color: #0f0f0f; 
+            color: #fff;
+            border: none;
+            border-radius: 10px; 
+            cursor: pointer;
+            margin-top: 10px; 
+            height: 80px; 
+            width: 100%; 
+            max-width: 900px; 
+            animation: blink 1s infinite; 
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .contact-button:hover {
+            background-color: #696969; 
+        }
+
+        .future-direction-section {
+            margin: 40px 0; 
+        }
+
+        footer {
+            text-align: center; 
+            padding: 20px; 
+            font-size: 12pt; 
+            color: #000;
+            background-color: #f8f8f8; 
+            margin-top: 15px; 
+        }
+
+        .taste-section {
+            display: flex; 
+            justify-content: space-between; 
+            margin: 40px 0;
+        }
+
+        .taste-name {
+            font-size: 24pt; /* Thay đổi cỡ chữ ở đây */
+            font-weight: 600;
+            margin-top: 10px;
+            text-align: center; /* Căn giữa ghi chú nếu cần */
+        }   
+
+        .taste-description {
+            flex: 1; 
+            text-align: left; 
+            padding: 20px; 
+            font-size: 22pt; 
+            color: #000;
+        }
+
+        .taste-images {
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px; 
+            flex: 1;
+        }
+
+        .taste-section img {
+            width: 100%; 
+            height: auto; 
+            border-radius: 10%; 
+            transition: transform 0.2s; 
+        }
+
+        .taste-section img:hover {
+            transform: scale(1.1); 
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DESIGNER PORTFOLIO</h1>
+    </header>
+
+    <nav>
+        <a href="https://trangtd26.github.io/BTL%20WEB/WEBTLinh.html" class="nav-link" id="home-button">HOME</a> 
+        <a href="#about">About Me</a>
+        <a href="#taste">Taste</a>
+        <a href="#skills">Skills</a>
+        <a href="#future-direction">Future Direction</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2 id="about">About Me</h2>
+        <div class="about-me-section">
+            <div class="profile-image">
+                <img src="./ảnh/Bùi Thơ.jpg" alt="Bùi Thị Thơ">
+            </div>
+            <div class="intro-section">
+                <p class="fade-in">Hello! I'm a creative designer passionate about UX/UI, brand graphics, and digital product development.</p>
+                <p class="fade-in">My full name: Bùi Thị Thơ</p>
+                <p class="fade-in">Birthday: 19/10/2005</p>
+                <p class="fade-in">Major: Information Technology</p>
+                <p class="fade-in">School: Hanoi Metropolitan University</p>
+            </div>
+        </div>
+
+        <h2 id="taste">Taste</h2>
+        <p style="font-size: 28px; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;">
+            Here are some of my interests and activities that bring me joy and fulfillment:
+        </p>
+        <div class="taste-section">
+            <div class="taste-description">
+                <img src="./ảnh/cacao.jpg" alt="Taste 1">
+                <div class="taste-name">Pets care</div>
+            </div>
+            <div class="taste-description">
+                <img src="./ảnh/du lịch.jpg" alt="Taste 2">
+                <div class="taste-name">Family outing</div>
+            </div>
+            <div class="taste-description">
+                <img src="./ảnh/bạn bè.jpg" alt="Taste 3">
+                <div class="taste-name">Hang out</div>
+            </div>
+            <div class="taste-description">
+                <img src="./ảnh/tình nguyện.jpg" alt="Taste 4">
+                <div class="taste-name">Volunteer</div>
+            </div>
+        </div>
+
+        <h2 id="skills">Skills</h2>
+        <p style="font-size: 28px; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;">
+            Here, I will showcase some of the essential skills I have developed through my studies and work experiences. These skills not only support my work but also help me grow personally and communicate effectively with others.
+        </p>
+                <div class="skills-section">
+            <div class="skill">
+                <img src="./ảnh/Photoshop.png" alt="Photoshop">
+                <div class="skill-name">Photoshop</div>
+            </div>
+            <div class="skill">
+                <img src="./ảnh/Illustrator.jpg" alt="Illustrator">
+                <div class="skill-name">Illustrator</div>
+            </div>
+            <div class="skill">
+                <img src="./ảnh/Capcut.jpg" alt="Capcut">
+                <div class="skill-name">Capcut</div>
+            </div>
+            <div class="skill">
+                <img src="./ảnh/visual studio code.jpg" alt="Web Develop">
+                <div class="skill-name">Web Develop</div>
+            </div>
+        </div>  
+        
+        <h2 id="future-direction">Future Direction</h2>
+        <div class="future-direction-section">
+            <img src="./ảnh/designer.jpg" alt="Future Direction" 
+                 style="width: 700px; height: auto; border-radius: 10%; margin: 20px auto; display: block;">
+            <p style="font-size: 24pt; font-weight: 500; text-align: center; color: #141313;">Designer</p>
+        </div>
+
+        <h2 id="contact">Contact Me</h2>
+        <div class="contact-section">
+            <input type="text" class="contact-input" placeholder="Your Name" required>
+            <input type="email" class="contact-input" placeholder="Your Email" required>
+            <textarea class="contact-input" placeholder="Your Message" required></textarea>
+            <button class="contact-button">Send</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Bùi Thị Thơ. All rights reserved.
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            const paragraphs = document.querySelectorAll('.intro-section p');
+            paragraphs.forEach((p, index) => {
+                setTimeout(() => {
+                    p.classList.add('visible');
+                }, index * 500);
+            });
+        });
+    </script>
+</body>
+</html>

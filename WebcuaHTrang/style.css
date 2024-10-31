@@ -1,0 +1,668 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial;
+    line-height: 1.6;
+    color: #333;
+    font-size: 1.3rem;
+}
+header {
+    background-color: #050505;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #9f5e96;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+nav ul li a:hover {
+    background-color: #9d9d9d;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('./Ảnh/bìa.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 90px 10px;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2rem;  
+}
+.about p{
+    font-size: 2rem;  
+}
+.fo{
+    font-size: 2rem;
+    display:flex ;
+    justify-content: space-between;
+    text-align: left;
+}
+.about-image {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Keyframe for floating effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Moves up slightly */
+    }
+}
+
+.fa-house{
+    color:#a64e98;
+}
+/* Kiểu dáng phần */
+section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+}
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ae65a4;
+    text-align: left;
+}
+.content-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.box {
+    flex: 1 1 250px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Chân trang */
+footer {
+    background-color: #000000;
+    color: #ae65a4;
+    text-align: center;
+    padding: 10px;
+}
+
+/*Phần ảnh trong Introduce*/
+.pictures{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    display: grid;
+    grid-template-areas:
+    "aa bb bb"
+    "aa cc dd";
+    margin: 50px 0px;
+    color: #ae65a4;
+}
+
+.self-pic-1{
+    grid-area: aa;
+    max-width: 500px;
+    max-height: 500px;
+    overflow: hidden;
+}
+.self-pic-1 img{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.view{
+    grid-area: bb;
+    max-width: 100%;
+    max-height: 270px;
+    overflow: hidden;
+}
+.view img{
+    max-width: 650px;
+}
+
+.duck{
+    grid-area: cc;
+    max-width: 310px;
+    max-height: 200px;
+    overflow: hidden;
+}
+.duck img{
+    max-width: 310px;
+}
+
+.flower{
+    grid-area: dd;
+    max-width: 310px;
+    max-height: 200px;
+    overflow: hidden;
+}
+.flower img{
+    max-width: 310px;
+}
+
+/*Skills*/
+.logo-figma, .logo-illustrator, .logo-html, .logo-css{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.logo-figma img, .logo-illustrator img, .logo-html img, .logo-css img{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.logo-figma img{
+    border-radius:8px;
+}
+
+/*Projects*/
+.project-image{
+    max-width: 200px;
+}
+
+.project-image img{
+    max-width: 200px;
+}
+
+.project-paragraph{
+    margin-top: -5.5px;
+    margin-left: 20px;
+}
+
+.heading-project{
+    font-size: 20px;
+    max-width: 721px;
+    margin-bottom: 10px;
+}
+
+.project-paragraph-line{
+    font-size: 15px;
+}
+
+.project-paragraph-line li {
+    padding-left: 20px; /* Khoảng cách cho các mục */
+}    
+    
+.project-paragraph-line li::before {
+    font-size: 40px; /* Kích thước bullet */
+    top: -28.5px;
+}
+
+/*Footer*/
+.footer{
+    font-size: 15px;
+    height: 60px;
+    margin-top: 50px;
+}
+
+/*Màn hình máy tính bảng hoặc máy tính xách tay nhỏ*/
+@media (min-width: 1024px) and (max-width: 1410px){
+/*Phần ảnh trong Introduce*/    
+.self-pic-1{
+    max-width: 500px;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.self-pic-1 img{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.scenery{
+    max-width: 100%;
+    max-height: 270px;
+}
+
+.scenery img{
+    max-width: 650px;
+}
+
+.duck{
+    max-width: 310px;
+    max-height: 200px;
+}
+
+.duck img{
+    max-width: 310px;
+}
+
+.flower{
+    max-width: 310px;
+    max-height: 200px;
+}
+
+.flower img{
+    max-width: 310px;
+}
+
+/*Skills*/
+.logo-illustrator, .logo-html, .logo-css{
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.logo-illustrator img, .logo-html img, .logo-css img{
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.logo-illustrator img{
+    border-radius:8px;
+}
+section {
+    text-align: center;
+}
+/*Projects*/
+.project-image{
+    max-width: 200px;
+}
+
+.project-image img{
+    max-width: 200px;
+}
+
+.project-paragraph{
+    margin-top: -5.5px;
+    margin-left: 20px;
+}
+
+.heading-project{
+    font-size: 30px;
+    max-width: 721px;
+    margin-bottom: 10px;
+}
+
+.project-paragraph-line{
+    font-size: 20px;
+}
+
+.project-paragraph-line li {
+    padding-left: 25px; /* Khoảng cách cho các mục */
+}    
+    
+.project-paragraph-line li::before {
+    font-size: 50px; /* Kích thước bullet */
+    top: -37px;
+}
+
+/*Chân trang*/
+.footer{
+    font-size: 15px;
+    height: 60px;
+    margin-top: 50px;
+}
+Phong cách cho khung phát nhạc Spotify */
+.spotify-music {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+}
+.spotify-music {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 20px;          
+ }
+.hobby-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.hobby {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.hobby img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hobby:hover img {
+    transform: scale(1.1);
+}
+.hobby p {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 0;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hnmu:hover p {
+    opacity: 1;
+}
+.hnmu-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+}
+
+.hnmu {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+}
+.hnmu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.hnmu:hover img {
+    transform: scale(1.1);
+}
+/* Skills Section */
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.skill {
+    width: 100px;
+    text-align: center;
+    opacity: 1;
+    /* transform: translateX(-100px); */
+    transition: transform 0.7s ease-in-out, opacity 0.8s ease-in-out;
+    
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.skill p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ae65a4;
+}
+
+.skill:hover img {
+    transform: scale(1.1);
+}
+
+/* Visibility Class for Animation */
+.skill.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.portfolio-container {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.project-item {
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards;
+    animation-delay: 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 300px;
+}
+
+.project-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Căn giữa toàn bộ container */
+#portfolio {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tạo hiệu ứng zoom cho ảnh bên trong */
+.image-wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.project-item:hover .image-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Phóng to toàn bộ project-item khi di chuột */
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Header và logo */
+/* Header và logo */
+#main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Logo Discord */
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+/* Menu icon ba gạch */
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    right: 30px; /* Dịch sang bên phải */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    background-color: #ae65a4;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden initially */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: right 0.3s;
+    overflow-y: auto;
+}
+
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Sắp xếp các bài tập theo hướng dọc */
+}
+
+#sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #ae65a4;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: #ae65a4;
+    font-size: 16px;
+}
+
+/* Hiển thị sidebar khi mở */
+#sidebar.open {
+    right: 0;
+}
+/* Sidebar và nút Lùi lại */
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Ẩn sidebar bên phải */
+    width: 250px;
+    height: 100%;
+    background-color: #030303;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    padding-top: 60px;
+}
+
+#sidebar.open {
+    right: 0;
+}
+
+/* Danh sách các bài tập */
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 0; /* Thêm khoảng cách bên dưới nút Lùi lại */
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #ae65a4;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: #ae65a4;
+    font-size: 16px;
+}
+/* Mũi tên lùi lại */
+.back-arrow {
+    display: inline-block;
+    font-size: 24px;
+    color: #ae65a4;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: color 0.3s ease;
+}
+
+.back-arrow:hover {
+    color: #ae65a4;
+}
+
+
