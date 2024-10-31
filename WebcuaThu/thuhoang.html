@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Hoàng Thị Anh Thư</title>
+    <style>
+        /* Định dạng CSS cơ bản */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+
+        /* Thanh chuyển hướng */
+        .navbar {
+            background-color: #ff69b4; /* Màu hồng */
+            display: flex;
+            justify-content: center;
+            padding: 14px 0;
+        }
+
+        .navbar a {
+            color: #ffffff; /* Màu chữ trắng */
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold; /* In đậm */
+            transition: font-size 0.3s, color 0.3s;
+            flex-grow: 1;
+            max-width: 150px;
+        }
+
+        .navbar a:hover {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        /* Khu vực ảnh và tên */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .banner img.large {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .banner .profile-pic {
+            width: auto;
+            height: 80%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .banner h1 {
+            font-size: 36px;
+            color: #000000;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        /* Phần Thông tin cá nhân */
+        .personal-info {
+            margin: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #ffb6c1; /* Màu nền hồng */
+        }
+
+        .personal-info h2 {
+            font-size: 28px;
+            color: #ffffff; /* Màu chữ trắng */
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 15px;
+        }
+
+        .personal-info-content {
+            display: flex;
+            justify-content: center; /* Căn giữa */
+            align-items: center;
+            gap: 20px;
+        }
+
+        .personal-info .info-text {
+            flex: 1;
+            text-align: left;
+            padding-right: 20px;
+        }
+
+        .personal-info p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+            margin: 8px 0;
+        }
+
+        .personal-info .info-images {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .personal-info .info-images img {
+            width: 150px; /* Độ lớn của ảnh */
+            height: 150px; /* Độ lớn của ảnh */
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Phần Sở thích */
+        .hobbies {
+            margin: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hobbies h2 {
+            font-size: 28px;
+            color: #ffb6c1;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .hobby-gallery {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hobby-item {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .hobby-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .hobby-item:hover {
+            transform: scale(1.1);
+        }
+
+        .hobby-item .hobby-caption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .hobby-item:hover .hobby-caption {
+            opacity: 1;
+        }
+
+        /* Phần Kĩ năng */
+        .skills {
+            margin: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffb6c1; /* Màu nền hồng */
+        }
+
+        .skills h2 {
+            font-size: 28px;
+            color: #ffffff; /* Màu chữ trắng */
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .work-skills, .tech-skills {
+            flex: 1;
+            padding: 10px;
+            text-align: center; /* Căn giữa */
+        }
+
+        .work-skills h3, .tech-skills h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .tech-skills {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            justify-items: center;
+        }
+
+        .tech-skill {
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .tech-skill:hover {
+            transform: scale(1.1);
+        }
+
+        .tech-skill img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .tech-skill p {
+            font-size: 16px;
+            margin-top: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Phần mục tiêu tương lai */
+        .future-goals {
+            margin: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .future-goals h2 {
+            font-size: 28px;
+            color: #ffb6c1;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .future-goals p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+            margin: 8px 0;
+        }
+
+        .future-goals ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .future-goals ul li {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Thanh chuyển hướng -->
+    <div class="navbar">
+        <a href="https://trangtd26.github.io/BTL%20WEB/WEBTLinh.html">Home</a>
+        <a href="#personal-info">Information</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#skills">Skills</a>
+        <a href="#goals">Future Goals</a>
+    </div>
+
+    <!-- Khu vực ảnh và tên -->
+    <div class="banner">
+        <img src="anh ngang.jpg" alt="Background" class="large">
+        <div class="banner-content">
+            <div class="profile-pic">
+                <img src="avatar.jpg" alt="Ảnh đại diện" style="width: 100%; height: auto; object-fit: cover;">
+            </div>
+            <h1>Hoàng Thị Anh Thư</h1>
+        </div>
+    </div>
+
+    <!-- Phần Thông tin cá nhân -->
+    <div class="personal-info" id="personal-info">
+        <h2>Personal Information</h2>
+        <div class="personal-info-content">
+            <div class="info-text">
+                <p><strong>Name:</strong> Hoàng Thị Anh Thư</p>
+                <p><strong>Date of Birth:</strong> 29/01/2005</p>
+                <p><strong>Hometown:</strong> Việt Hùng - Đông Anh - Hà Nội</p>
+                <p><strong>University:</strong> Đại học Thủ Đô Hà Nội</p>
+                <p><strong>Major:</strong> Computer Science</p>
+            </div>
+            <div class="info-images">
+                <img src="cá nhân 1.jpg" alt="Ảnh cá nhân 1">
+                <img src="cá nhân 2.jpg" alt="Ảnh cá nhân 2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Phần Sở thích -->
+    <div class="hobbies" id="hobbies">
+        <h2>Hobbies</h2>
+        <div class="hobby-gallery">
+            <div class="hobby-item">
+                <img src="anh1.jpg" alt="Tham gia tình nguyện">
+                <div class="hobby-caption">Volunteering</div>
+            </div>
+            <div class="hobby-item">
+                <img src="anh2.jpg" alt="Du lịch">
+                <div class="hobby-caption">Traveling</div>
+            </div>
+            <div class="hobby-item">
+                <img src="anh3.jpg" alt="Chụp ảnh">
+                <div class="hobby-caption">Photography</div>
+            </div>
+            <div class="hobby-item">
+                <img src="anh4.jpg" alt="Lập trình">
+                <div class="hobby-caption">Programming</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phần Kĩ năng -->
+    <div class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="work-skills" style="flex: 1;">
+                <h3 style="font-weight: bold; font-style: italic; color: #000;">Work Skills</h3>
+                <ul>
+                    <li>Group management and leadership.</li>
+                    <li>Good situational awareness.</li>
+                    <li>Quick problem-solving skills.</li>
+                    <li>Good learning ability.</li>
+                    <li>Effective communication.</li>
+                </ul>
+            </div>
+            <div class="tech-skills" style="flex: 1;">
+                <h3 style="font-weight: bold; font-style: italic; color: #000;">Technical Skills</h3>
+                <div class="tech-skills-logos">
+                    <div class="tech-skill">
+                        <img src="html.jpg" alt="HTML">
+                        <p>HTML</p>
+                    </div>
+                    <div class="tech-skill">
+                        <img src="dev c++.webp" alt="DEV C++">
+                        <p>DEV C++</p>
+                    </div>
+                    <div class="tech-skill">
+                        <img src="photoshop.png" alt="Photoshop">
+                        <p>Photoshop</p>
+                    </div>
+                    <div class="tech-skill">
+                        <img src="illustrator.png" alt="Illustrator">
+                        <p>Illustrator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phần Mục tiêu tương lai -->
+    <div class="future-goals" id="goals">
+        <h2>Future Goals</h2>
+        <p><strong>In studies and work:</strong></p>
+        <ul>
+            <li>Graduate on time.</li>
+            <li>Have a job related to my major with a stable income.</li>
+            <li>Enhance many professional and soft skills.</li>
+            <li>Maximize personal development.</li>
+        </ul>
+        <p><strong>About personal and family:</strong></p>
+        <ul>
+            <li>Have more time for myself and my family.</li>
+            <li>Take my family to travel many places.</li>
+            <li>Achieve financial stability and be at my best.</li>
+            <li>Maintain a relaxed and cheerful spirit.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
