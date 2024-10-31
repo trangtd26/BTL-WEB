@@ -16,19 +16,19 @@
 
         /* Thanh chuyển hướng */
         .navbar {
-            background-color: #ff69b4; /* Màu hồng */
+            background-color: #ff69b4;
             display: flex;
             justify-content: center;
             padding: 14px 0;
         }
 
         .navbar a {
-            color: #ffffff; /* Màu chữ trắng */
+            color: #ffffff;
             text-align: center;
             padding: 10px 20px;
             text-decoration: none;
             font-size: 18px;
-            font-weight: bold; /* In đậm */
+            font-weight: bold;
             transition: font-size 0.3s, color 0.3s;
             flex-grow: 1;
             max-width: 150px;
@@ -91,12 +91,12 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            background-color: #ffb6c1; /* Màu nền hồng */
+            background-color: #ffb6c1;
         }
 
         .personal-info h2 {
             font-size: 28px;
-            color: #ffffff; /* Màu chữ trắng */
+            color: #ffffff;
             font-weight: bold;
             text-decoration: underline;
             margin-bottom: 15px;
@@ -104,7 +104,7 @@
 
         .personal-info-content {
             display: flex;
-            justify-content: center; /* Căn giữa */
+            justify-content: center;
             align-items: center;
             gap: 20px;
         }
@@ -129,8 +129,8 @@
         }
 
         .personal-info .info-images img {
-            width: 150px; /* Độ lớn của ảnh */
-            height: 150px; /* Độ lớn của ảnh */
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -206,12 +206,12 @@
             background-color: #f9f9f9;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #ffb6c1; /* Màu nền hồng */
+            background-color: #ffb6c1;
         }
 
         .skills h2 {
             font-size: 28px;
-            color: #ffffff; /* Màu chữ trắng */
+            color: #ffffff;
             font-weight: bold;
             text-decoration: underline;
             margin-bottom: 15px;
@@ -228,7 +228,7 @@
         .work-skills, .tech-skills {
             flex: 1;
             padding: 10px;
-            text-align: center; /* Căn giữa */
+            text-align: center;
         }
 
         .work-skills h3, .tech-skills h3 {
@@ -239,11 +239,21 @@
             margin-bottom: 10px;
         }
 
+        .work-skills ul li {
+            color: #000; /* Đổi màu chữ của Work Skills thành đen */
+        }
+
         .tech-skills {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tech-skill-list {
+            display: flex;
             gap: 15px;
-            justify-items: center;
+            justify-content: center;
+            margin-top: 10px;
         }
 
         .tech-skill {
@@ -304,26 +314,25 @@
             margin: 5px 0;
             color: #333;
         }
-
     </style>
 </head>
 <body>
 
     <!-- Thanh chuyển hướng -->
     <div class="navbar">
-        <a href="https://trangtd26.github.io/BTL-WEB/WEBTLinh.html">Home</a>
+        <a href="https://trangtd26.github.io/BTL%20WEB/WEBTLinh.html">Home</a>
         <a href="#personal-info">Information</a>
         <a href="#hobbies">Hobbies</a>
         <a href="#skills">Skills</a>
         <a href="#goals">Future Goals</a>
     </div>
 
-    <!-- Khu vực ảnh và tên -->
-    <div class="banner">
-        <img src="anh ngang.jpg" alt="Background" class="large">
+    <!-- Phần ảnh và tên -->
+    <div class="banner" id="home">
+        <img class="large" src="anh ngang.jpg" alt="Background Image">
         <div class="banner-content">
             <div class="profile-pic">
-                <img src="avatar.jpg" alt="Ảnh đại diện" style="width: 100%; height: auto; object-fit: cover;">
+                <img src="avatar.jpg" alt="Profile Picture" style="width: 150px; height: 150px;">
             </div>
             <h1>Hoàng Thị Anh Thư</h1>
         </div>
@@ -334,15 +343,17 @@
         <h2>Personal Information</h2>
         <div class="personal-info-content">
             <div class="info-text">
-                <p><strong>Name:</strong> Hoàng Thị Anh Thư</p>
-                <p><strong>Date of Birth:</strong> 29/01/2005</p>
-                <p><strong>Hometown:</strong> Việt Hùng - Đông Anh - Hà Nội</p>
-                <p><strong>University:</strong> Đại học Thủ Đô Hà Nội</p>
-                <p><strong>Major:</strong> Computer Science</p>
+                <p>Name: Hoàng Thị Anh Thư</p>
+                <p>Birthdate: 29/01/2005</p>
+                <p>Address: Viet Hung, Dong Anh, Ha Noi</p>
+                <p>University: Hanoi Metropolitan University</p>
+                <p>Major: Infomation Technology</p>
+                <p>Email: hoangthianhthu2901@gmail.com</p>
+                <p>Phone: 0362062977</p>
             </div>
             <div class="info-images">
-                <img src="cá nhân 1.jpg" alt="Ảnh cá nhân 1">
-                <img src="cá nhân 2.jpg" alt="Ảnh cá nhân 2">
+                <img src="cá nhân 1.jpg" alt="Image 1">
+                <img src="cá nhân 2.jpg" alt="Image 2">
             </div>
         </div>
     </div>
@@ -365,7 +376,7 @@
             </div>
             <div class="hobby-item">
                 <img src="anh4.jpg" alt="Lập trình">
-                <div class="hobby-caption">Programming</div>
+                <div class="hobby-caption">Code</div>
             </div>
         </div>
     </div>
@@ -374,8 +385,8 @@
     <div class="skills" id="skills">
         <h2>Skills</h2>
         <div class="skills-container">
-            <div class="work-skills" style="flex: 1;">
-                <h3 style="font-weight: bold; font-style: italic; color: #000;">Work Skills</h3>
+            <div class="work-skills">
+                <h3>Work Skills</h3>
                 <ul>
                     <li>Group management and leadership.</li>
                     <li>Good situational awareness.</li>
@@ -384,9 +395,9 @@
                     <li>Effective communication.</li>
                 </ul>
             </div>
-            <div class="tech-skills" style="flex: 1;">
-                <h3 style="font-weight: bold; font-style: italic; color: #000;">Technical Skills</h3>
-                <div class="tech-skills-logos">
+            <div class="tech-skills">
+                <h3>Technical Skills</h3>
+                <div class="tech-skill-list">
                     <div class="tech-skill">
                         <img src="html.jpg" alt="HTML">
                         <p>HTML</p>
@@ -425,6 +436,13 @@
             <li>Achieve financial stability and be at my best.</li>
             <li>Maintain a relaxed and cheerful spirit.</li>
         </ul>
+    </div>
+    <!-- Phần Liên hệ -->
+    <div class="contact" id="contact" style="margin: 30px; padding: 20px; background-color: #000000; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: center; color: #ffffff;">
+        <h2 style="font-size: 28px; color: #ffb6c1; font-weight: bold; text-decoration: underline; margin-bottom: 15px;">Contact</h2>
+        <p style="font-size: 18px; line-height: 1.8; margin: 0;">Email: <a href="mailto:hoangthianhthu2901@hmail.com" style="color: #ffffff;">hoangthianhthu2901@hmail.com</a> | 
+        Facebook: <a href="https://www.facebook.com/profile.php?id=100015481899174" target="_blank" style="color: #ffffff;">Thư Hoàng</a> | 
+        Instagram: <a href="https://www.instagram.com/ahn_thuw917/" target="_blank" style="color: #ffffff;">ahn_thuw917</a></p>
     </div>
 
 </body>
