@@ -25,7 +25,7 @@ body {
   top: 20px;
   left: 20px;
   color: #393131; /* đổi màu chữ WELCOME TO OUR WEBSITES*/
-  opacity: 0;
+  opacity: 2;
   animation: fadeIn 1.5s ease forwards;
 }
 
@@ -36,7 +36,7 @@ body {
 /* Nút Next To ở góc dưới bên phải */
 .next-button {
   padding: 15px 30px;
-  background-color: #00c0c0;
+  background-color: #e17a42;
   border: none;
   color: white;
   font-size: 1.2em;
@@ -50,7 +50,7 @@ body {
 }
 
 .next-button:hover {
-  background-color: #008080;
+  background-color: #111111;
 }
 
 .members-section {
@@ -86,7 +86,7 @@ body {
 .underline {
   width: 200px;
   height: 5px;
-  background: #f05f57;
+  background: #e17a42;
   border-radius: 5px;
 }
 
