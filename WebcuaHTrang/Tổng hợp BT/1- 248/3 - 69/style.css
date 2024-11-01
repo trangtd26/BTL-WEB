@@ -1,0 +1,24 @@
+
+/* Định dạng cho các tiêu đề */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial;
+    font-size: 18pt;
+    font-weight: bold;
+    color: rgb(28, 67, 244); /* Màu xanh */
+    font-style: normal;
+    
+}
+/* Định dạng cho các liên kết */
+a {
+    color: rgb(4, 60, 20)
+    text-decoration: none;/* Không gạch chân */
+}
+/* Đặt nền chung cho tất cả các trang */
+body {
+    background-image: url("./2.jpg"); /* Đường dẫn tới ảnh nền liên quan đến ngày 2/9 */
+    background-size: cover;
+    font-family:"Arial", serif;
+    font-size: 14pt;
+    color: rgb(193, 58, 150);
+    font-style: italic;
+}
