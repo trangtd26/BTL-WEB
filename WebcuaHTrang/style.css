@@ -12,11 +12,11 @@ body {
 header {
     background-color: #050505;
     color: #fff;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 nav ul {
     display: flex;
@@ -30,7 +30,7 @@ nav ul li a {
     color: #9f5e96;
     text-decoration: none;
     font-weight: bold;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
 }
 nav ul li a:hover {
     background-color: #9d9d9d;
@@ -175,20 +175,6 @@ footer {
     max-width: 310px;
 }
 
-/*Skills*/
-.logo-figma, .logo-illustrator, .logo-html, .logo-css{
-    max-width: 50px;
-    max-height: 50px;
-}
-
-.logo-figma img, .logo-illustrator img, .logo-html img, .logo-css img{
-    max-width: 50px;
-    max-height: 50px;
-}
-
-.logo-figma img{
-    border-radius:8px;
-}
 
 /*Projects*/
 .project-image{
@@ -538,8 +524,6 @@ Phong cách cho khung phát nhạc Spotify */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Header và logo */
-/* Header và logo */
 #main-header {
     display: flex;
     align-items: center;
@@ -589,80 +573,7 @@ Phong cách cho khung phát nhạc Spotify */
 }
 
 
-#sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column; /* Sắp xếp các bài tập theo hướng dọc */
-}
 
-#sidebar ul li {
-    padding: 15px;
-    border-bottom: 1px solid #ae65a4;
-}
 
-#sidebar ul li a {
-    text-decoration: none;
-    color: #ae65a4;
-    font-size: 16px;
-}
-
-/* Hiển thị sidebar khi mở */
-#sidebar.open {
-    right: 0;
-}
-/* Sidebar và nút Lùi lại */
-#sidebar {
-    position: fixed;
-    top: 0;
-    right: -250px; /* Ẩn sidebar bên phải */
-    width: 250px;
-    height: 100%;
-    background-color: #030303;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
-    transition: right 0.3s ease;
-    padding-top: 60px;
-}
-
-#sidebar.open {
-    right: 0;
-}
-
-/* Danh sách các bài tập */
-#sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0 0 0; /* Thêm khoảng cách bên dưới nút Lùi lại */
-    display: flex;
-    flex-direction: column;
-}
-
-#sidebar ul li {
-    padding: 15px;
-    border-bottom: 1px solid #ae65a4;
-}
-
-#sidebar ul li a {
-    text-decoration: none;
-    color: #ae65a4;
-    font-size: 16px;
-}
-/* Mũi tên lùi lại */
-.back-arrow {
-    display: inline-block;
-    font-size: 24px;
-    color: #ae65a4;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    transition: color 0.3s ease;
-}
-
-.back-arrow:hover {
-    color: #ae65a4;
-}
 
 
